@@ -5,7 +5,7 @@ class AmazonProductReviewsController {
 
     public async getReviews(req: Request, res: Response) {
         const product = {
-            name: req.params.product,
+            url: req.body.url
         };
 
         const amazonProductReviewsService = new WebCrawler(product);
@@ -15,8 +15,6 @@ class AmazonProductReviewsController {
         const reviews = amazonProductReviewsService.getReviewsList();
 
         return res.json(reviews);
-
-
     }
 }
 

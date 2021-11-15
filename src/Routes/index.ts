@@ -9,6 +9,6 @@ routes.get("/", (req, res) => {
     });
 });
 
-routes.get("/product/:product", AmazonProductReviewsController.getReviews);
+routes.post("/product", AmazonProductReviewsController.getReviews);
 
 export default routes;

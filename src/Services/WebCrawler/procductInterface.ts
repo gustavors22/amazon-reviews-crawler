@@ -1,5 +1,5 @@
 interface IProduct {
-    name: string;
+    url: string;
 }
 
 export default IProduct;
